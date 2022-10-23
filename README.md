@@ -1,6 +1,6 @@
 #totalitycorp-frontend-challenge
 
-#Created the clone of LinkedIn with a responsive mobile-friendly layout.
+#Created the clone of homepage of LinkedIn website with a responsive mobile-friendly layout.
 
 #Use of Languages & Tools: React, Javascript, HTML, CSS.
 
