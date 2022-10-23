@@ -1,0 +1,68 @@
+.right{
+    grid-area: rightside;
+}
+
+.card{
+    padding: 12px;
+}
+
+.title{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 100%;
+    color: rgba(0, 0 , 0, 0.6);
+}
+
+.feedlist{
+    margin-top: 16px;
+}
+.feedlist li{
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    position: relative;
+    font-size: 14px;
+}
+.feeditem{
+    display: flex;
+    flex-direction: column;
+}
+.feeditem button{
+    background-color: transparent;
+    color: rgba(0, 0 , 0, 0.6);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
+    padding: 8px 12px;
+    align-items: center;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-weight: 600;
+    display: inline-flex;
+    justify-content: center;
+    max-width: 480px;
+    min-height: 32px;
+    text-align: center;
+    outline: none;
+}
+
+.avatar{
+    background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
+}
+
+.recommendations{
+    color: #0a66c2;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+}

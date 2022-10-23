@@ -1,0 +1,229 @@
+.header{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    padding: 0 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    min-width: 1128px;
+    min-height: 100%;
+}
+
+.header-logo{
+    margin-right: 8px;
+    font-size: 0px;
+}
+
+
+.header-search{
+    position: relative;
+    opacity: 1;
+    flex-grow: 1;
+}
+.header-search-box{
+    max-width: 280px;
+}
+.header-search-box input {
+    border: none;
+    box-shadow: none;
+    background-color: #eef3f8;
+    border-radius: 2px;
+    color: rgba(0, 0, 0, 0.9);
+    width: 218px;
+    padding: 0 8px 0 40px;
+    line-height: 1.75;
+    font-weight: 400;
+    font-size: 14px;
+    height: 34px;
+    vertical-align: text-top;
+}
+.header-search-box input:focus {
+    border: 2px solid #0a66c2;
+    outline: none;
+}
+.header-search-icon{
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    z-index: 1;
+    margin: 0;
+    border-radius: 0 2px 2px 0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-navs{
+    margin-right: 10vw;
+    display: block;
+}
+.header-navs ul{
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+.header-navs ul .active span::after{
+    content: '';
+    transform: scaleX(1);
+    border-bottom: 2px solid var(--white, #fff);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.9);
+}
+.header-navs li{
+    display: flex;
+    align-items: center;
+}
+.header-navs li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 42px;
+    min-width: 80px;
+    position: relative;
+    text-decoration: none;
+}
+.header-navs li a img{
+    width: 24px;
+    border-radius: 50%;
+}
+.header-navs li a span{
+    color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.header-navs li a span:active,
+.header-navs li a span:hover{
+    color: rgba(0, 0, 0, 0.9);
+}
+/* .user{
+    display: block;
+} */
+.usericon{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.imgdown{
+    width: 15px;
+}
+.imgdown:hover{
+   cursor: pointer;
+}
+.header-user-icon a{
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 42px;
+    min-width: 80px;
+    position: relative;
+    text-decoration: none;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user span:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.signout{
+    position: absolute;
+    top: 45px;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    transition-duration: 167ms;
+    text-align: center;
+    box-shadow: 1px 1px 1px gray, -1px -1px 1px gray;
+}
+
+
+.signout:hover{
+    cursor: pointer;
+    background-color: #0a66c2;
+    color: white;
+}
+
+.header-work-icon{
+    margin-right: 5vw;
+    border-left: 1px solid darkgray;
+}
+.header-work-icon a{
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    min-height: 42px;
+    min-width: 80px;
+    position: relative;
+    text-decoration: none;
+}
+.work{
+    display: flex;
+    align-items: center;
+}
+.work span:hover{
+    color: black;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+   
+    .header-user-icon,
+    .header-work-icon{
+      display: none !important;
+    } 
+    .header-navs{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+    }
+    .header-navs ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    .header-navs li a{
+        min-width: 70px
+    }
+} 
+    

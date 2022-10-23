@@ -1,0 +1,125 @@
+.left{
+    grid-area: leftside;
+}
+
+.card-info{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 12px 12px 16px;
+}
+
+.card-background{
+    background: url('./../../assets/card-bg.svg');
+    background-position: center;
+    background-size: 462px;
+    height: 54px;
+    margin: -12px -12px 0;
+}
+
+.photo{
+    background-image: url('./../../assets/photo.svg');
+    width: 72px;
+    height: 72px;
+    box-sizing: border-box;
+    box-shadow: none;
+    background-clip: content-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 60%;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: -38px auto 12px;
+}
+.desc{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+    line-height: 1.5;
+}
+.photo-text{
+    color: #0a66c2;
+    margin-top: 4px;
+    font-size: 13.5px;
+    font-weight: 500;
+    line-height: 1.33;
+}
+
+.widget{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.widget a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px 12px;
+}
+.widget a:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+}
+.widget div{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.widget div span{
+    font-size: 12px;
+    line-height: 1.33;
+}
+.widget div span:first-child{
+    color: rgba(0, 0, 0, 0.6);
+}
+.widget div span:nth-child(2){
+    color: rgba(0, 0, 0, 1);
+}
+
+.item{
+    border-color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    padding: 12px;
+    font-size: 12px;
+    display: block;
+}
+.item span{
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 1);
+}
+.item span:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+
+.community-card{ 
+    padding: 8px 0 0; 
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+}
+.community-card a{
+    color: black;
+    padding: 4px 12px;
+    font-size: 12px;
+}
+.community-card a:hover{
+    cursor: pointer;
+    color: #0a66c2;
+}
+.community-card a span{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lastchild{
+    border-top: 1px solid #d6cec2;
+}
+.lchild{
+   color: rgba(0, 0, 0, 0.6);
+   text-decoration: none;
+   padding: 12px 0;
+}
+.lastchild:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+}
