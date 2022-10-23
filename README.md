@@ -8,7 +8,8 @@
 1. The website has a navbar & a footer.
 2. Uses flexbox/css grids for layout.
 3. Hover/Click interactions for buttons, links etc is present.
-4. The website is fully responsive.
+4. User can Like and Repost the post by clicking on them.
+5. The website is fully responsive.
 
 #Approach:
 1. Uses React, JS, HTML, CSS modules to create this clone.
