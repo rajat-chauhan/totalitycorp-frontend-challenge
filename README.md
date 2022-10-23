@@ -5,10 +5,10 @@
 #Use of Languages & Tools: React, Javascript, HTML, CSS.
 
 #Features:
-The website has a navbar & a footer
-Uses flexbox/css grids for layout
-Hover/Click interactions for buttons, links etc is present
-The website is responsive
+1. The website has a navbar & a footer.
+2. Uses flexbox/css grids for layout.
+3. Hover/Click interactions for buttons, links etc is present.
+4. The website is fully responsive.
 
 #Approach:
 1. Uses React, JS, HTML, CSS modules to create this clone.
