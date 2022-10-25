@@ -214,6 +214,8 @@
 
 
 @media screen and (max-width: 768px) {
+   
+    .header-user-icon,
     .header-work-icon{
       display: none !important;
     } 
