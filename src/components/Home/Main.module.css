@@ -77,9 +77,9 @@
     opacity: 0.7;
     margin: 0 4px 0 -10px;
 }
-.lower span{
+.lower button span{
     color: rgba(0, 0, 0, 0.6);
-    font-size: 12.5px;
+    font-size: 12px;
 }
 .lower-img-svg{
     width: 25px; 
@@ -89,7 +89,19 @@
   width: 20px; 
   height: 20px; 
 }
-
+@media screen  and (max-width: 768px) {
+    .lower{
+        width: 100%;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .lower img{
+        margin: 0 1px 0 2px;
+    }
+    .lower button span{
+        font-size: 10px;
+    }
+}
 
 .article{
     padding: 0;
@@ -114,6 +126,7 @@
 .innerarticle a img{
     width: 48px;
     height: 48px;
+    border-radius: 50%;
 }
 .innerarticle a div{
     display: flex;
@@ -216,4 +229,7 @@
     width: 20px;
     height: 20px;
     padding: 2px;
+}
+sup{
+    color: red;
 }

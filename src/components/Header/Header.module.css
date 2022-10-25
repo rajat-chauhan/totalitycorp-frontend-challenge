@@ -176,7 +176,7 @@
 }
 
 .header-work-icon{
-    margin-right: 5vw;
+    margin-right: 2vw;
     border-left: 1px solid darkgray;
 }
 .header-work-icon a{
@@ -203,11 +203,17 @@
     cursor: pointer;
 }
 
+.header-link p{
+    font-size: 12px;
+    color: brown;
+    text-decoration: underline;
+    width: 100px;
+    padding: 4px;
+}
+
 
 
 @media screen and (max-width: 768px) {
-   
-    .header-user-icon,
     .header-work-icon{
       display: none !important;
     } 
@@ -224,6 +230,9 @@
     }
     .header-navs li a{
         min-width: 70px
+    }
+    .header-link p{
+        display: none;
     }
 } 
     

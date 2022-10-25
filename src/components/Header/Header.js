@@ -70,6 +70,13 @@ const Header = () => {
                                 </span>
                             </a>
                         </div>
+
+                        <div className={styles['header-link']}>
+                            <p>
+                                Get Hired Faster,
+                                Try Premium Free
+                            </p>
+                        </div>
                     </ul>
                 </div>
 

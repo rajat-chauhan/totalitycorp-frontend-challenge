@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Leftside.module.css';
-import Card from '../UI/Card';
-import widgetSvg from './../../assets/widget-icon.svg';
+import Card from './../UI/Card/Card';
 import itemSvg from './../../assets/item-icon.svg';
 import plusSvg from './../../assets/plus-icon.svg'
 
@@ -14,25 +13,31 @@ const Leftside = () => {
                     <div className={styles['card-background']} />
                     <a>
                         <div className={styles.photo} />
-                        <div className={styles.desc} >Welcome, there!</div>
+                        <div className={styles.desc} > User </div>
                     </a>
                     <a>
-                        <div className={styles['photo-text']}>Add a photo</div>
+                        <div className={styles['photo-text']}>Software Engineer at ABC</div>
                     </a>
                 </div>
                 <div className={styles.widget}>
                     <a>
                         <div>
-                          <span>Connections</span>
-                          <span>Grow your network</span>
+                          <span>Who's viewed your profile</span>
                         </div>
-                        <img src={widgetSvg} alt=''/>                   
+                         <p> 50</p>                 
+                    </a>
+                    <a>
+                        <div>
+                          <span>Connections</span>
+                          <span>Manage your network</span>
+                        </div>
+                          <p>500</p>                  
                     </a>
                 </div>
                 <div className={styles.item}>
                     <span>
                      <img src={itemSvg} alt=''/> 
-                     My Items                    
+                     <p> My Items </p>                    
                     </span>
                 </div>
             </ Card>
@@ -48,10 +53,10 @@ const Leftside = () => {
                     </span>
                 </a>
                 <a>
-                    <span>Follow Hashtags</span>
+                    <span>Followed Hashtags</span>
                 </a>
                 <a className={styles.lastchild}> 
-                    <span className={styles.lchild}>Discover More</span>
+                    <div className={styles.lchild}>Discover more</div>
                 </a>
             </Card>
         </div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import Card from './../UI/Card';
+import React, { useState } from 'react';
+import Card from './../UI/Card/Card';
 import styles from './Main.module.css';
 import userSvg from './../../assets/user.svg';
 import photoSvg from './../../assets/picture_icon.svg';
@@ -12,21 +12,59 @@ import likeSvg from './../../assets/like-icon.png';
 import commentSvg from './../../assets/comment-icon.png';
 import repostSvg from './../../assets/repost-icon.png';
 import sendSvg from './../../assets/send-icon.png';
+import Modal from '../UI/Modal/Modal';
 
 const Main = () => {
+    const [countLike, setCountLike] = useState(100);
+    const [repostCount, setRepostCount] = useState(10);
+    const [showImgModal, setShowImgModal] = useState(false);
+    const [showVdoModal, setShowVdoModal] = useState(false);
+    const [showPostModal, setShowPostModal] = useState(false);
+
+    function clickLikeHandler(){
+        setCountLike((prevValue) => prevValue + 1 )
+    }
+
+    function clickRepostHandler(){
+        setRepostCount((prevValue) => prevValue + 1)
+    }
+
+    function clickPhotoHandler(){
+        setShowImgModal(true);
+    }
+    function clickVideoHandler(){
+        setShowVdoModal(true);
+    }
+    function hideImgModal(){
+        setShowImgModal(false);
+    }
+    function hideVdoModal(){
+        setShowVdoModal(false);
+    }
+    function clickStartPostHandler(){
+        setShowPostModal(true);
+    }
+    function hidePostModal(){
+        setShowPostModal(false);
+    }
+
     return (
+        <>
+        {showImgModal && <Modal title= 'Edit your photo' message='Select images to share' onConfirm={hideImgModal} />}
+        {showVdoModal && <Modal title= 'Select/Edit your video' message='Select video to share'  onConfirm={hideVdoModal} />}
+        {showPostModal && <Modal title= 'Create your post' message='Write your post...'  onConfirm={hidePostModal} />}
         <div className={styles.main}>
             <Card className={styles.sharebox}>
                 <div className={styles.upper}>
                     <img src={userSvg} alt='' />
-                    <button>Start a post</button>
+                    <button onClick={clickStartPostHandler}>Start a post</button>
                 </div>
                 <div className={styles.lower}>
-                    <button>
+                    <button onClick={clickPhotoHandler}>
                         <img className={styles['lower-img-svg']} src={photoSvg} alt='' />
                         <span>Photo</span>
                     </button>
-                    <button>
+                    <button onClick={clickVideoHandler}> 
                         <img className={styles['lower-img-png']} src={videoSvg} alt='' />
                         <span>Video</span>
                     </button>
@@ -46,15 +84,15 @@ const Main = () => {
                     <a>
                         <img src={userSvg} alt='' />
                         <div>
-                            <span> Title </span>
-                            <span> Info </span>
-                            <span> Date </span>
+                            <span> Rajat Chauhan </span>
+                            <span> Software Engineer </span>
+                            <span> 22-Oct-2022 </span>
                         </div>
                     </a>
                     <button><img src={ellipsisPng} alt='' /></button>
                 </div>
                 <div className={styles.description}>
-                    Description
+                    Working on Totality-corp frontend challenge!
                 </div>
                 <div className={styles.sharedImg}>
                     <a>
@@ -66,7 +104,7 @@ const Main = () => {
                         <button>
                             <img src='https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb' alt='' />
                             <img src='https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f' alt='' />
-                            <span>100</span>
+                            <span>{countLike}</span>
                         </button>
                     </li>
                     <li>
@@ -74,7 +112,7 @@ const Main = () => {
                     </li>
                 </ul>
                 <div className={styles.socialicon}>
-                    <button className={styles.btn}>
+                    <button className={styles.btn} onClick={clickLikeHandler}>
                         <img src={likeSvg} alt='' />
                         <span>  Like </span>
                     </button>
@@ -82,9 +120,9 @@ const Main = () => {
                         <img src={commentSvg} alt='' />
                         <span> Comment </span>
                     </button>
-                    <button className={styles.btn}>
+                    <button className={styles.btn} onClick={clickRepostHandler}>
                         <img src={repostSvg} alt='' />
-                        <span>  Repost</span> 
+                        <span><sup> {repostCount} </sup>Repost</span> 
                     </button>
                     <button className={styles.btn}>
                         <img src={sendSvg} alt='' />
@@ -93,6 +131,7 @@ const Main = () => {
                 </div>
             </Card>
         </div>
+        </>
     );
 };
 

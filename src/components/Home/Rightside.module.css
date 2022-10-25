@@ -1,3 +1,13 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+}
+
 .right{
     grid-area: rightside;
 }
@@ -15,54 +25,143 @@
     color: rgba(0, 0 , 0, 0.6);
 }
 
+.title img:hover{
+    cursor: pointer;
+}
+
 .feedlist{
     margin-top: 16px;
 }
+ul{
+    list-style-type: disc; 
+}
 .feedlist li{
     display: flex;
-    align-items: center;
-    margin: 12px 0;
-    position: relative;
-    font-size: 14px;
-}
-.feeditem{
-    display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin: 12px 0;
+    padding: 4px;
 }
-.feeditem button{
-    background-color: transparent;
-    color: rgba(0, 0 , 0, 0.6);
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
-    padding: 8px 12px;
-    align-items: center;
-    border-radius: 16px;
-    box-sizing: border-box;
-    font-weight: 600;
-    display: inline-flex;
-    justify-content: center;
-    max-width: 480px;
-    min-height: 32px;
-    text-align: center;
-    outline: none;
+.feedlist li:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
-
-.avatar{
-    background-image: url("https://static-exp1.licdn.com/sc/h/1b4vl1r54ijmrmcyxzoidwmxs");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 48px;
-    height: 48px;
-    margin-right: 8px;
+.feedlist h2{
+    opacity: 0.7;
+    font-size: 15px;
+    text-align: left;
+}
+.feedlist span{
+    font-size: 11px;
+    opacity: 0.65;
+    margin-top: 5px;
+}
+.feedlist span img{
+    width: 4px;
+    height: 4px;
+    opacity: 0.7;
 }
 
 .recommendations{
-    color: #0a66c2;
+    color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 14px;
+    width: 7vw;
+    padding: 5px;
+    border-radius: 4px;
+    transition: 167ms;
+}
+.recommendations img{
+    width: 20px;
+    height: 20px;
+}
+.recommendations:hover{
+    background-color: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 .banner img{
     width: 100%;
     height: 100%;
 }
+.news{
+    border: 1px solid darkgray;
+    width: 27.5vw;
+    height: 10vh;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 1px 2px 2px lightgrey;
+    position: absolute;
+    top: 8.5vh;
+    right: 5vw;
+    z-index:50;
+    display: flex;
+    justify-content: space-between;
+}
+.news p{
+    font-size: 16px;
+    text-align: left;
+    opacity: 1;
+    margin-right: 6px;
+}
+.news a{
+    color: #0a66c2;
+}
+.news a:hover{
+    color: #0a66c2;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.news img{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+}
+.news img:hover{
+    cursor: pointer;
+}
+.footer{
+    margin: 2vh 0 2px 25%;
+    display: flex;
+}
+.footer img{
+    width: 50px;
+    height: 50px;
+}
+.footer span{
+    font-size: 12.5px;
+    margin-left: 4px;
+}
+
+@media screen and (max-width:768px) {
+    .recommendations{
+        font-size: 12px;
+        font-weight: 500;
+        width: 21.5vw;
+        padding: 7px 5px;
+        border-radius: 4px;
+    }
+    .recommendations img{
+        width: 15px;
+        height: 15px;
+    }
+    .footer span{
+        font-size: 11px;
+    }
+    .news{
+        width: 60vw;
+        height: 10vh;
+        padding: 10px;
+        position: fixed;
+        margin-left: 10vw;
+        z-index:500;
+    }
+}
+
+

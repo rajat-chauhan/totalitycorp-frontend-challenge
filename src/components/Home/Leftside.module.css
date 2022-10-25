@@ -36,11 +36,15 @@
     color: rgba(0, 0, 0, 0.9);
     line-height: 1.5;
 }
+.desc:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
 .photo-text{
-    color: #0a66c2;
+    color: rgba(0, 0, 0, 0.55);
     margin-top: 4px;
-    font-size: 13.5px;
-    font-weight: 500;
+    font-size: 12.9px;
+    font-weight: bold;
     line-height: 1.33;
 }
 
@@ -59,6 +63,10 @@
 .widget a:hover{
     background-color: rgba(0, 0, 0, 0.08);
 }
+.widget a p{
+    font-size: 12px;
+    color: #0a66c2;
+}
 .widget div{
     display: flex;
     flex-direction: column;
@@ -69,10 +77,12 @@
     line-height: 1.33;
 }
 .widget div span:first-child{
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: bolder;
 }
 .widget div span:nth-child(2){
-    color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
 }
 
 .item{
@@ -90,6 +100,11 @@
 .item span:hover{
     background-color: rgba(0, 0, 0, 0.08);
 }
+.item p{
+    margin-left: 8px;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+}
 
 
 .community-card{ 
@@ -103,14 +118,15 @@
     padding: 4px 12px;
     font-size: 12px;
 }
-.community-card a:hover{
-    cursor: pointer;
-    color: #0a66c2;
-}
 .community-card a span{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #0a66c2;
+}
+.community-card a span:hover{
+    cursor: pointer;
+    text-decoration: underline;  
 }
 .lastchild{
     border-top: 1px solid #d6cec2;
